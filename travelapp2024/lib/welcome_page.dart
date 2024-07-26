@@ -42,7 +42,7 @@ class WelcomePage extends StatelessWidget {
                 ),
               ),
               Align(
-                alignment: Alignment.center,  // Center the image within its parent
+                alignment: Alignment.center,  
                 child: Image.asset('assets/Logo.png'),
               ),
               Positioned(

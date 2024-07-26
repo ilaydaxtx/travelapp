@@ -60,6 +60,9 @@ flutter:
     - assets/Golden Gate Bridge.png
     - assets/Path.png
     - assets/Logo.png
+    - assets/Facebook.png
+    - assets/Google.png
+    - assets/Apple.png
 
   fonts:
     - family: AvertaPE
@@ -68,6 +71,10 @@ flutter:
           weight: 400
         - asset: assets/fonts/AvertaPE-ExtraBold.otf
           weight: 700
+    - family: Sans Serif
+      fonts:
+        - asset: assets/fonts/Fellix-Regular.ttf
+
 
   #         style: italic
   #   - family: Trajan Pro

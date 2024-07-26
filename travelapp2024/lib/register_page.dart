@@ -65,30 +65,97 @@ class RegisterPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Welcome to your new adventure",
-                    style: TextStyle(
-                      fontFamily: "AvertaPE",
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.DarkPurple,
-                      fontSize: 32, 
+                  Container(
+                    width: 328,
+                    child: Text(
+                      "Welcome to your new adventure",
+                      style: TextStyle(
+                        fontFamily: "AvertaPE",
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.DarkPurple,
+                        fontSize: 32, 
+                      ),
                     ),
                   ),
                   SizedBox(height: 20), 
-                  TextFormField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: "Pick a Country",
+                  Container(
+                    width: 328,
+                    child: TextFormField(
+                      
+                      decoration: InputDecoration(
+                        
+                        border: OutlineInputBorder(),
+                        labelText: "Pick a Country",
+                      ),
                     ),
                   ),
                   SizedBox(height: 20,),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: "Phone Number",
+                  Container(
+                    width: 328,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        
+                        labelText: "Phone Number",
+                      ),
                     ),
                   ),
-                  
+                  SizedBox(height: 10,),
+                  Container(
+                    width: 328,
+                    child: Text("We will send you a code via SMS to confirm your phone number.",
+                    style: TextStyle(
+                      fontFamily: "Sans Serif",
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.Grey,
+                      
+                    ),),
+                  ),
+                  SizedBox(height: 10,),
+                  GestureDetector(
+                    onTap: () {
+                      //homepage e gonder
+                    },
+                    child: Container(
+                      width: 328,
+                      height: 48,
+                      padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(4),
+                      color: AppColors.BrightPurple),
+                      child: Center(
+                        child: Text("submit",
+                        style: TextStyle(color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("assets/Facebook.png"),
+                      SizedBox(width: 25),
+                      Image.asset("assets/Google.png"),
+                      SizedBox(width: 25),
+                      Image.asset("assets/Apple.png")
+                    ],
+                  ),
+                  SizedBox(height: 126,),
+                  Container(
+                    width: 328,
+                    child: 
+                    Center(
+                      child: Text("Login",
+                      style: TextStyle(
+                        fontFamily: "AvertaPE",
+                        fontWeight: FontWeight.w800,
+                        fontSize: 16,
+                        color: AppColors.BrightPurple
+                      ),),
+                    ),
+                  ),
                 ],
               ),
             ),
