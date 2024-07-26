@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart'; 
+import 'package:travelapp2024/welcome_page.dart';
 import 'register_page.dart'; 
 
 class VerticalPageView extends StatelessWidget {
@@ -9,7 +9,7 @@ class VerticalPageView extends StatelessWidget {
       body: PageView(
         scrollDirection: Axis.vertical,
         children: [
-          MyApp(),
+          WelcomePage(),
           RegisterPage(),
         ],
       ),

@@ -56,7 +56,9 @@ class WelcomePage extends StatelessWidget {
               ),
 
             ]),
-            
+            floatingActionButton: FloatingActionButton(onPressed: () { //delete this later
+              Get.to(()=>RegisterPage());
+            },),
           ),
     );
 

@@ -64,7 +64,7 @@ flutter:
   fonts:
     - family: AvertaPE
       fonts:
-        - asset: assets/fonts/AvertaPE-Regular.ttf
+        - asset: assets/fonts/AvertaPE-Regular.otf
           weight: 400
         - asset: assets/fonts/AvertaPE-ExtraBold.otf
           weight: 700
