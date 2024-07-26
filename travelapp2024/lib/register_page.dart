@@ -58,7 +58,7 @@ class RegisterPage extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 100, // Adjust this value as needed
+              top: 100, 
               left: 20,
               right: 20,
               child: Column(
@@ -71,14 +71,21 @@ class RegisterPage extends StatelessWidget {
                       fontFamily: "AvertaPE",
                       fontWeight: FontWeight.w700,
                       color: AppColors.DarkPurple,
-                      fontSize: 32, // Adjust size as needed
+                      fontSize: 32, 
                     ),
                   ),
-                  SizedBox(height: 20), // Space between text and TextFormField
+                  SizedBox(height: 20), 
                   TextFormField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: "Pick a Country",
+                    ),
+                  ),
+                  SizedBox(height: 20,),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: "Phone Number",
                     ),
                   ),
                   
