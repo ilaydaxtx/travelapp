@@ -63,6 +63,7 @@ flutter:
     - assets/Facebook.png
     - assets/Google.png
     - assets/Apple.png
+    - assets/sky.png
 
   fonts:
     - family: AvertaPE

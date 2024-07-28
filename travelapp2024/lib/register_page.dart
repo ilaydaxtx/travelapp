@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travelapp2024/colors.dart';
+import 'package:travelapp2024/home_page.dart';
 
 void main() {
   runApp(RegisterPage());
@@ -155,9 +156,16 @@ class RegisterPage extends StatelessWidget {
                         color: AppColors.BrightPurple
                       ),),
                     ),
+                    
                   ),
+                  ElevatedButton(onPressed: (){
+                    Get.to(()=>HomePage());
+
+                  }, child: Text("go to next page"),) //bunu sil
                 ],
+                
               ),
+              
             ),
           ],
         ),

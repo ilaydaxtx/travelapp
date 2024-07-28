@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:travelapp2024/register_page.dart';
 
 void main(){
-  runApp(WelcomePage());
+  runApp(WelcomePage()); //this page is actually the splash page
 }
 
 class WelcomePage extends StatelessWidget {
@@ -13,7 +13,6 @@ class WelcomePage extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-            appBar: null,
             body: Stack(children: [
               Positioned(
                 bottom: 0,
