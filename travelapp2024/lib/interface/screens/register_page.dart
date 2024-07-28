@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:travelapp2024/colors.dart';
-import 'package:travelapp2024/home_page.dart';
+import 'package:travelapp2024/global/styles/colors.dart';
+import 'package:travelapp2024/interface/screens/home_page.dart';
 
 void main() {
   runApp(RegisterPage());
@@ -10,9 +10,7 @@ void main() {
 class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         body: Stack(
           children: [
             Positioned(
@@ -169,7 +167,7 @@ class RegisterPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
+
     );
   }
 }

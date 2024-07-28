@@ -10,15 +10,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         body: Stack(
           children: [
           Positioned(
             child: Image.asset("asset/sky.png")),
         ],)
-      ),
-    );
+      );
+   
   }
 }
