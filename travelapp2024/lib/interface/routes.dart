@@ -1,4 +1,5 @@
 class Routes {
-  static const registerPage = "/registerPage";
   static const welcomePage = "/welcomePage";
+  static const registerPage = "/registerPage";
+  static const homePage = "/homePage";
 }

@@ -5,7 +5,7 @@ import 'package:travelapp2024/interface/screens/register_page.dart';
 import 'package:travelapp2024/interface/routes.dart';
 import 'package:travelapp2024/splash/splash_binding.dart';
 import 'package:travelapp2024/interface/screens/welcome_page.dart';
-
+import 'package:travelapp2024/interface/screens/home_page.dart';
 void main() {
   runApp(MyApp());
 }
