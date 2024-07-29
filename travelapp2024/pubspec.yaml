@@ -67,6 +67,7 @@ flutter:
     - assets/berlin.png
     - assets/Clouds.png
     - assets/Clouds (1).png
+    - assets/headphone.png
 
   fonts:
     - family: AvertaPE

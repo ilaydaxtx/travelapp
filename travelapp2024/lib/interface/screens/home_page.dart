@@ -68,14 +68,9 @@ class HomePage extends StatelessWidget {
               
             ),
           ),
-          Positioned(
-            top: 640,
-            left: 10,
-            child: Image.asset(
-              "assets/berlin.png",
-              
-            ),
-          ),
+          
+          
+
           Positioned(
             top: 64,
             left: 16,
