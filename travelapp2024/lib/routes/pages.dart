@@ -1,11 +1,10 @@
 import 'package:get/get.dart';
-import 'package:travelapp2024/controllers/welcome_controller.dart';
-import 'package:travelapp2024/interface/routes.dart';
-import 'package:travelapp2024/interface/screens/home_page.dart';
-import 'package:travelapp2024/interface/screens/home_page.dart';
-import 'package:travelapp2024/registerpage_view/register_page.dart';
-import 'package:travelapp2024/controllers/splash_controller.dart';
-import 'package:travelapp2024/interface/screens/welcome_page.dart';
+import 'package:travelapp2024/ui/welcome/welcome_controller.dart';
+import 'package:travelapp2024/routes/routes.dart';
+
+import 'package:travelapp2024/ui/register/register_page.dart';
+import 'package:travelapp2024/ui/splash/splash_controller.dart';
+import 'package:travelapp2024/ui/welcome/welcome_page.dart';
 
 class Pages {
   static final pages = [

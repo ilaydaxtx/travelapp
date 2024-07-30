@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travelapp2024/interface/screens/welcome_page.dart';
-import '../../registerpage_view/register_page.dart';
+import 'package:travelapp2024/ui/welcome/welcome_page.dart';
+import '../../ui/register/register_page.dart';
 
 class VerticalPageView extends StatelessWidget {
   @override

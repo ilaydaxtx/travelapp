@@ -84,7 +84,7 @@ flutter:
         - asset: assets/fonts/Fellix-Regular.ttf
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Fellix-Regular.ttf
 
 
   #         style: italic

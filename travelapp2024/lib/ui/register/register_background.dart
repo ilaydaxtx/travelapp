@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travelapp2024/global/styles/gradients.dart'; 
+import 'package:travelapp2024/const/styles/gradients.dart'; 
 
 class RegisterView { //register page's background 
   static Stack registerView() {

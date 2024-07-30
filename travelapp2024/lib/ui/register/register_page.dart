@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:travelapp2024/appbar/appbar_view.dart';
-import 'package:travelapp2024/global/styles/colors.dart';
-import 'package:travelapp2024/global/styles/gradients.dart';
-import 'package:travelapp2024/interface/screens/home_page.dart';
-import 'package:travelapp2024/registerpage_view/registerview.dart';
+import 'package:travelapp2024/const/appbar/appbar_view.dart';
+import 'package:travelapp2024/const/styles/colors.dart';
+import 'package:travelapp2024/const/styles/gradients.dart';
+import 'package:travelapp2024/ui/home/view/home_view.dart';
+import 'package:travelapp2024/ui/register/register_background.dart';
 
 void main() {
   runApp(MyApp());
@@ -85,7 +85,7 @@ body: Stack(
             height: Get.height * 0.06,
             child: GestureDetector(
               onTap: () {
-                Get.to(() => HomePage());
+                Get.to(() => HomeView());
               },
               child: Container(
                 decoration: BoxDecoration(

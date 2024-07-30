@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:travelapp2024/models/model_favorites_list.dart';
+import 'package:travelapp2024/ui/home/model/model_favorites_list.dart';
 
 class DestinationController extends GetxController {
   var destinations = <Destination>[
