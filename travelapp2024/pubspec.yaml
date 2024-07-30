@@ -68,6 +68,9 @@ flutter:
     - assets/Clouds.png
     - assets/Clouds (1).png
     - assets/headphone.png
+    - assets/cellular.png
+    - assets/wifi.png
+    - assets/battery.png
 
   fonts:
     - family: AvertaPE
@@ -79,6 +82,9 @@ flutter:
     - family: Sans Serif
       fonts:
         - asset: assets/fonts/Fellix-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
 
 
   #         style: italic

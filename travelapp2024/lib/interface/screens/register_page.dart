@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:travelapp2024/appbar/appbar_view.dart';
 import 'package:travelapp2024/global/styles/colors.dart';
 import 'package:travelapp2024/global/styles/gradients.dart';
 import 'package:travelapp2024/interface/screens/home_page.dart';
@@ -22,6 +23,7 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppbarView.appBarView(),
       
       body: Stack(
         children: [
@@ -120,13 +122,13 @@ class RegisterPage extends StatelessWidget {
                       decoration: BoxDecoration(
                       image: DecorationImage(image: AssetImage("assets/Facebook.png"),),),
                       ),
-                      SizedBox(width: Get.width * 0.01,),
+                      SizedBox(width: Get.width * 0.006,),
                     Container(
                       width: Get.width * 0.2,
                       height: Get.height * 0.08,
                       decoration: BoxDecoration(
                       image: DecorationImage(image: AssetImage("assets/Google.png"),),),),
-                      SizedBox(width: Get.width * 0.01,),
+                      SizedBox(width: Get.width * 0.006,),
                     Container(
                       width: Get.width * 0.2,
                       height: Get.height * 0.08,
@@ -141,6 +143,7 @@ class RegisterPage extends StatelessWidget {
                 color: AppColors.BrightPurple),),),
                 
               ],
+              
             ),
           ),
         ],
