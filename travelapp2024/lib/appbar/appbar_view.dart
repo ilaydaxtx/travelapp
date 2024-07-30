@@ -9,7 +9,6 @@ class AppbarView {
       toolbarHeight: Get.height*0.03,
       flexibleSpace: SafeArea(
         child: Container(
-          
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.center,
