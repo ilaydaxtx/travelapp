@@ -93,7 +93,9 @@ class RegisterPage extends StatelessWidget {
                   width: Get.width * 0.9,
                   height: Get.height * 0.06,
                   child: GestureDetector(
-                    onTap: (){},
+                    onTap: (){
+                      Get.to(() => HomePage());
+                    },
                     child: Container(
                       
                       decoration: BoxDecoration(color: AppColors.BrightPurple,
