@@ -1,173 +1,148 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travelapp2024/global/styles/colors.dart';
+import 'package:travelapp2024/global/styles/gradients.dart';
 import 'package:travelapp2024/interface/screens/home_page.dart';
 
 void main() {
-  runApp(RegisterPage());
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: RegisterPage(),
+    );
+  }
 }
 
 class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(
-          children: [
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Image.asset(
-                'assets/Fill.png',
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return Container(color: Colors.red); //if error occurs 
-                },
-              ),
-            ),
-            Positioned(
-              top: 0,
-              right: 0,
-              left: 0,
-              child: Image.asset(
-                'assets/Golden Gate Bridge.png',
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return Container(color: Colors.red); //if error occurs 
-                },
-              ),
-            ),
-            Positioned(
-              bottom: 10,
-              right: 0,
-              child: Image.asset(
-                'assets/Path.png',
-                errorBuilder: (context, error, stackTrace) {
-                  return Container(color: Colors.red); //if error occurs 
-                },
-              ),
-            ),
-            Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              child: Image.asset(
-                'assets/Bar.png',
+      
+      body: Stack(
+        children: [
+          
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/Golden Gate Bridge.png'),
                 fit: BoxFit.cover,
               ),
             ),
-            Positioned(
-              top: 100, 
-              left: 20,
-              right: 20,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 328,
-                    child: Text(
-                      "Welcome to your new adventure",
-                      style: TextStyle(
-                        fontFamily: "AvertaPE",
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.DarkPurple,
-                        fontSize: 32, 
-                      ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              gradient: Gradients.gradientColor, 
+            ),
+          ),
+          
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: Get.width * 0.9,
+                  child: Text(
+                  "Welcome to your new adventure",
+                  style: TextStyle(
+                    fontFamily: "AvertaPE",
+                    fontSize: 32,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.DarkPurple,
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+                ),
+                SizedBox(height: Get.height * 0.02),
+                Container( //dropdown + icon needed
+                  width: Get.width * 0.9,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      label: Text("Pick a country"),
+                      border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 20), 
-                  Container(
-                    width: 328,
-                    child: TextFormField(
-                      
-                      decoration: InputDecoration(
-                        
-                        border: OutlineInputBorder(),
-                        labelText: "Pick a Country",
-                      ),
+                ),
+                SizedBox(height: Get.height * 0.01),
+                Container( //phone number validation needed
+                  width: Get.width * 0.9,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      label: Text("Phone Number"),
+                      border: OutlineInputBorder(),
                     ),
                   ),
-                  SizedBox(height: 20,),
-                  Container(
-                    width: 328,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        
-                        labelText: "Phone Number",
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 10,),
-                  Container(
-                    width: 328,
-                    child: Text("We will send you a code via SMS to confirm your phone number.",
-                    style: TextStyle(
-                      fontFamily: "Sans Serif",
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.Grey,
-                      
-                    ),),
-                  ),
-                  SizedBox(height: 10,),
-                  GestureDetector(
-                    onTap: () {
-                      //homepage e gonder
-                    },
+                ),
+                SizedBox(height: Get.height * 0.01),
+                Container(
+                  width: Get.width * 0.9,
+                  child: Text("We will send you a code via SMS to confirm your phone number.",
+                  style: TextStyle(
+                    fontFamily: "Sans Serif",
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.Grey
+                  ),),
+                ),
+                SizedBox(height: Get.height * 0.03),
+                Container(
+                  width: Get.width * 0.9,
+                  height: Get.height * 0.06,
+                  child: GestureDetector(
+                    onTap: (){},
                     child: Container(
-                      width: 328,
-                      height: 48,
-                      padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(4),
-                      color: AppColors.BrightPurple),
-                      child: Center(
-                        child: Text("submit",
-                        style: TextStyle(color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500),
-                        ),
+                      
+                      decoration: BoxDecoration(color: AppColors.BrightPurple,
+                      borderRadius: BorderRadius.circular(4)),
+                      alignment: Alignment.center,
+                      width: Get.width * 0.9,
+                      child: Text("Submit",
+                      style: TextStyle(fontFamily: "AvertaPE",
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset("assets/Facebook.png"),
-                      SizedBox(width: 25),
-                      Image.asset("assets/Google.png"),
-                      SizedBox(width: 25),
-                      Image.asset("assets/Apple.png")
-                    ],
-                  ),
-                  SizedBox(height: 126,),
-                  Container(
-                    width: 328,
-                    child: 
-                    Center(
-                      child: Text("Login",
-                      style: TextStyle(
-                        fontFamily: "AvertaPE",
-                        fontWeight: FontWeight.w800,
-                        fontSize: 16,
-                        color: AppColors.BrightPurple
-                      ),),
-                    ),
-                    
-                  ),
-                  ElevatedButton(onPressed: (){
-                    Get.to(()=>HomePage());
-
-                  }, child: Text("go to next page"),) //bunu sil
-                ],
+                ),
+                SizedBox(height: Get.height * 0.03),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: Get.width * 0.2,
+                      height: Get.height * 0.08,
+                      decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/Facebook.png"),),),
+                      ),
+                      SizedBox(width: Get.width * 0.01,),
+                    Container(
+                      width: Get.width * 0.2,
+                      height: Get.height * 0.08,
+                      decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/Google.png"),),),),
+                      SizedBox(width: Get.width * 0.01,),
+                    Container(
+                      width: Get.width * 0.2,
+                      height: Get.height * 0.08,
+                      decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/Apple.png"),),),),
+                  ],
+                ),
+                SizedBox(height: Get.height * 0.1,),
+                Container(child: Text("Login Here",
+                style: TextStyle(fontFamily: "AvertaPE",
+                fontWeight: FontWeight.w600,
+                color: AppColors.BrightPurple),),),
                 
-              ),
-              
+              ],
             ),
-          ],
-        ),
-
+          ),
+        ],
+      ),
     );
   }
 }
