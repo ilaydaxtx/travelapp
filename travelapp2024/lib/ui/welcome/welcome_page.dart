@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:travelapp2024/ui/register/register_page.dart';
+import 'package:travelapp2024/ui/register/view/register_view.dart';
 
 void main(){
   runApp(WelcomePage()); //this page is actually the splash page

@@ -71,6 +71,11 @@ flutter:
     - assets/cellular.png
     - assets/wifi.png
     - assets/battery.png
+    - assets/search.png
+    - assets/barcelona.png
+    - assets/rio.jpg
+    - assets/cuzco.jpg
+    - assets/venecia.jpg
 
   fonts:
     - family: AvertaPE

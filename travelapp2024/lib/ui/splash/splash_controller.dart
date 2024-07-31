@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:travelapp2024/ui/register/register_page.dart';
+import 'package:travelapp2024/ui/register/view/register_view.dart';
 import 'package:travelapp2024/routes/routes.dart';
 
 class SplashController extends GetxController{

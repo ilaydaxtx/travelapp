@@ -1,220 +1,169 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:travelapp2024/controllers/favorites_controller.dart';
-import 'package:travelapp2024/global/styles/colors.dart';
-import 'package:travelapp2024/main.dart';
+import 'package:travelapp2024/const/appbar/appbar_view.dart';
+import 'package:travelapp2024/const/styles/colors.dart';
+import 'package:travelapp2024/const/styles/gradients.dart';
 
 void main() {
-  runApp(HomePage());
+  runApp(const MyApp());
 }
 
-class HomePage extends StatelessWidget {
-  final DestinationController controller = Get.put(DestinationController());
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Stack(
-        children: [
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: Image.asset(
-              "assets/Bar.png",
-              fit: BoxFit.cover,
-            ),
-          ),
-          Positioned(
-            top: 24,
-            left: 0,
-            right: 0,
-            child: Image.asset(
-              "assets/sky.png",
-              fit: BoxFit.cover,
-            ),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Image.asset(
-              "assets/Fill.png",
-              fit: BoxFit.cover,
-            ),
-          ),
-          Positioned(
-            top: 760,
-            left: 140,
-            child: Image.asset(
-              "assets/Clouds.png",
-              
-            ),
-          ),
-          Positioned(
-            top: 680,
-            left: 10,
-            child: Image.asset(
-              "assets/Clouds (1).png",
-              
-            ),
-          ),
-          Positioned(
-            top: 640,
-            left: 10,
-            child: Image.asset(
-              "assets/berlin.png",
-              
-            ),
-          ),
-          
-          
-
-          Positioned(
-            top: 64,
-            left: 16,
-            right: 16,
-            child: GestureDetector(
-              onTap: () {},
-              child: Container(
-                width: 328,
-                height: 48,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
-                  color: Colors.white,
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16.0),
-                      child: Icon(Icons.search_sharp),
-                    ),
-                    SizedBox(width: 8), 
-                    Text(
-                      "Where are you travelling?",
-                      style: TextStyle(
-                        fontFamily: "AvertaPE",
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            top: 285,
-            left: 16,
-            child: Container(
-              width: 328,
-              height: 22,
-              child: Text(
-                "Favourite Destinations",
-                style: TextStyle(
-                  fontFamily: "AvertaPE",
-                  fontWeight: FontWeight.w700,
-                  fontSize: 18,
-                  color: AppColors.PrimaryBlack,
-                ),
-              ),
-            ),
-          ),
-          
-          Positioned(
-
-            top: 320,
-            left: 16,
-            right: 16,
-            child: Column(
-              children: List.generate(
-                controller.destinations.length,
-                (index) {
-                  var destination = controller.destinations[index];
-                  return GestureDetector(
-                    onTap: () {
-                      controller.toggleFavorite(destination);
-                    },
-                    child: Container(
-                      margin: EdgeInsets.only(bottom: 8),
-                      padding: EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(4),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 3,
-                            offset: Offset(0, 2),
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            destination.name,
-                            style: TextStyle(
-                              fontFamily: "AvertaPE",
-                              fontWeight: FontWeight.w600,
-                              fontSize: 16,
-                            ),
-                          ),
-                          Icon(
-                            destination.isFavorite
-                                ? Icons.favorite
-                                : Icons.favorite_border,
-                            color: destination.isFavorite
-                                ? Colors.red
-                                : Colors.grey,
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ),
-          Positioned(
-            top: 525,
-            left: 16,
-            child: Container(
-            width: 328,
-            height: 22,
-            child: Text("Highest-rated hotels near you",
-            style: TextStyle(
-              fontFamily: "AvertaPE",
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              color: AppColors.PrimaryBlack,
-            ),),
-            
-          ))
-        ],
-      ),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeView(),
     );
   }
 }
 
-class Destination {
-  String name;
-  bool isFavorite;
+class HomeView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      
+      appBar: AppbarView.appBarView(),
+      body: Container(
+        height: Get.height,
+        decoration: BoxDecoration(
+          gradient: Gradients.gradientColor,
+        ),
+        child: SingleChildScrollView(
+          padding: EdgeInsets.zero,
+          child: Column(
+            children: [
+              
+              Container(
+                
+                width: Get.width,
+                height: Get.height * 0.3,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/sky.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Align( //TODO dhchdb??
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20),
+                    width: Get.width * 0.9,
+                    height: Get.height * 0.07,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(4)),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 20),
+                          child: Image.asset("assets/search.png",),
+                        ),
+                        SizedBox(width: Get.width * 0.03,),
+                        Text("Where are you traveling to?",
+                        style: TextStyle(fontFamily: "AvertaPE",
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.PrimaryBlack,
+                        fontSize: 16),),
+                      ],),
+                  ),
+                ),
+              ),
+              SizedBox(height: Get.height * 0.03,),
+              Container(
+              width: Get.width * 0.9,
+              height: Get.height * 0.05,
+              
+              child: Text("Favourite Destinations",
+              style: TextStyle(fontWeight: FontWeight.w700,
+              fontFamily: "AvertaPE",
+              fontSize: 20,
+              color: AppColors.PrimaryBlack),),
+              ),
+              
+              Align(
+                alignment: Alignment.topCenter,
+                child: Container(
+                  width: Get.width *0.9,
+                  height: Get.height * 0.2, //TODO add icons + resize the height
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          padding: EdgeInsets.zero,
+                          children: [
+                            Container(
+                              width: Get.width * 0.5,
+                              height: Get.height * 0.2,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage("assets/barcelona.png")),
+                                borderRadius: BorderRadius.circular(4)),
+                            ),
+                            SizedBox(width: Get.width * 0.03,),
+                            Container(
+                              padding: EdgeInsets.zero,
+                              margin: EdgeInsets.zero,
+                              width: Get.width * 0.5,
+                              height: Get.height * 0.4,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage("assets/barcelona.png")),
+                                borderRadius: BorderRadius.circular(4)),
+                            ),
+                          ],
+                        ),
+                      
+                    ),
+              ),
+              Container(
+                width: Get.width * 0.9,
+              child: Text("Highest rated Hotels near you",
+              style: TextStyle(fontWeight: FontWeight.w700,
+              fontFamily: "AvertaPE",
+              fontSize: 20,
+              color: AppColors.PrimaryBlack),),),
+        
+               Align(
+                alignment: Alignment.topCenter,
+                child: Container(
+                  width: Get.width *0.9,
+                  height: Get.height * 0.2,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          padding: EdgeInsets.zero,
+                          children: [
+                            Container(
+                              width: Get.width * 0.5,
+                              height: Get.height * 0.6,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage("assets/barcelona.png")),
+                                borderRadius: BorderRadius.circular(4)),
+                            ),
+                            SizedBox(width: Get.width * 0.03,),
+                            Container(
+                              padding: EdgeInsets.zero,
+                              margin: EdgeInsets.zero,
+                              width: Get.width * 0.5,
+                              height: Get.height * 0.6,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage("assets/barcelona.png")),
+                                borderRadius: BorderRadius.circular(4)),
+                            ),
+                          ],
+                        ), 
+                    ),
+              ),  
+            ],
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        child: Image.asset("assets/headphone.png"),
+),
 
-  Destination(this.name, this.isFavorite);
-}
-
-class DestinationController extends GetxController {
-  var destinations = <Destination>[
-    Destination("Barcelona", false),
-    Destination("Rio", false),
-    Destination("Tokyo", false),
-  ].obs;
-
-  void toggleFavorite(Destination destination) {
-    destination.isFavorite = !destination.isFavorite;
-    destinations.refresh();
+    );
   }
 }
