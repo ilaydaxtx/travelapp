@@ -25,138 +25,138 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppbarView.appBarView(),
-     
-body: Stack(
-  children: [
-    RegisterView.registerView(), 
-    Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Stack(
         children: [
-          Container(
-            width: Get.width * 0.9,
-            child: Text(
-              "Welcome to your new adventure",
-              style: TextStyle(
-                fontFamily: "AvertaPE",
-                fontSize: 32,
-                fontWeight: FontWeight.w700,
-                color: AppColors.DarkPurple,
-              ),
-              textAlign: TextAlign.start,
-            ),
-          ),
-          SizedBox(height: Get.height * 0.02),
-          Container( //dropdown + icon needed
-            width: Get.width * 0.9,
-            child: TextFormField(
-              decoration: InputDecoration(
-                label: Text("Pick a country"),
-                border: OutlineInputBorder(),
-              ),
-            ),
-          ),
-          SizedBox(height: Get.height * 0.01),
-          Container( //phone number validation needed
-            width: Get.width * 0.9,
-            child: TextFormField(
-              decoration: InputDecoration(
-                label: Text("Phone Number"),
-                border: OutlineInputBorder(),
-              ),
-            ),
-          ),
-          SizedBox(height: Get.height * 0.01),
-          Container(
-            width: Get.width * 0.9,
-            child: Text(
-              "We will send you a code via SMS to confirm your phone number.",
-              style: TextStyle(
-                fontFamily: "Sans Serif",
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: AppColors.Grey,
-              ),
-            ),
-          ),
-          SizedBox(height: Get.height * 0.03),
-          Container(
-            width: Get.width * 0.9,
-            height: Get.height * 0.06,
-            child: GestureDetector(
-              onTap: () {
-                Get.to(() => HomeView());
-              },
-              child: Container(
-                decoration: BoxDecoration(
-                  color: AppColors.BrightPurple,
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                alignment: Alignment.center,
-                width: Get.width * 0.9,
-                child: Text(
-                  "Submit",
-                  style: TextStyle(
-                    fontFamily: "AvertaPE",
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
+          RegisterView.registerView(),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: Get.width * 0.9,
+                  child: Text(
+                    "Welcome to your new adventure",
+                    style: TextStyle(
+                      fontFamily: "AvertaPE",
+                      fontSize: 32,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.DarkPurple,
+                    ),
+                    textAlign: TextAlign.start,
                   ),
                 ),
-              ),
-            ),
-          ),
-          SizedBox(height: Get.height * 0.03),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: Get.width * 0.2,
-                height: Get.height * 0.08,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/Facebook.png"),
+                SizedBox(height: Get.height * 0.02),
+                Container(
+                  //dropdown + icon needed
+                  width: Get.width * 0.9,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      label: Text("Pick a country"),
+                      border: OutlineInputBorder(),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(width: Get.width * 0.006),
-              Container(
-                width: Get.width * 0.2,
-                height: Get.height * 0.08,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/Google.png"),
+                SizedBox(height: Get.height * 0.01),
+                Container(
+                  //phone number validation needed
+                  width: Get.width * 0.9,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      label: Text("Phone Number"),
+                      border: OutlineInputBorder(),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(width: Get.width * 0.006),
-              Container(
-                width: Get.width * 0.2,
-                height: Get.height * 0.08,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/Apple.png"),
+                SizedBox(height: Get.height * 0.01),
+                Container(
+                  width: Get.width * 0.9,
+                  child: Text(
+                    "We will send you a code via SMS to confirm your phone number.",
+                    style: TextStyle(
+                      fontFamily: "Sans Serif",
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.Grey,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: Get.height * 0.1),
-          Container(
-            child: Text(
-              "Login Here",
-              style: TextStyle(
-                fontFamily: "AvertaPE",
-                fontWeight: FontWeight.w600,
-                color: AppColors.BrightPurple,
-              ),
+                SizedBox(height: Get.height * 0.03),
+                Container(
+                  width: Get.width * 0.9,
+                  height: Get.height * 0.06,
+                  child: GestureDetector(
+                    onTap: () {
+                      Get.to(() => HomeView());
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.BrightPurple,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      alignment: Alignment.center,
+                      width: Get.width * 0.9,
+                      child: Text(
+                        "Submit",
+                        style: TextStyle(
+                          fontFamily: "AvertaPE",
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: Get.height * 0.03),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: Get.width * 0.2,
+                      height: Get.height * 0.08,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Facebook.png"),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: Get.width * 0.006),
+                    Container(
+                      width: Get.width * 0.2,
+                      height: Get.height * 0.08,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Google.png"),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: Get.width * 0.006),
+                    Container(
+                      width: Get.width * 0.2,
+                      height: Get.height * 0.08,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Apple.png"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: Get.height * 0.1),
+                Container(
+                  child: Text(
+                    "Login Here",
+                    style: TextStyle(
+                      fontFamily: "AvertaPE",
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.BrightPurple,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
       ),
-    ),
-  ],
-),
-
     );
   }
 }

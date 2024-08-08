@@ -76,6 +76,10 @@ flutter:
     - assets/rio.jpg
     - assets/cuzco.jpg
     - assets/venecia.jpg
+    - assets/clipboard.png
+    - assets/heart.png
+    - assets/home.png
+    - assets/person.png
 
   fonts:
     - family: AvertaPE
