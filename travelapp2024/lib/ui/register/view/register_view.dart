@@ -4,6 +4,7 @@ import 'package:travelapp2024/const/appbar/appbar_view.dart';
 import 'package:travelapp2024/const/styles/colors.dart';
 import 'package:travelapp2024/const/styles/gradients.dart';
 import 'package:travelapp2024/ui/home/view/home_view.dart';
+import 'package:travelapp2024/ui/main_menu/view/main_menu_view.dart';
 import 'package:travelapp2024/ui/register/register_background.dart';
 
 void main() {
@@ -86,7 +87,7 @@ class RegisterPage extends StatelessWidget {
                   height: Get.height * 0.06,
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(() => HomeView());
+                      Get.to(() => MainMenuView());
                     },
                     child: Container(
                       decoration: BoxDecoration(

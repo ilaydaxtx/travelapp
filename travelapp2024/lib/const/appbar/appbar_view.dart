@@ -27,13 +27,16 @@ class AppbarView {
               SizedBox(
                 width: Get.width * 0.01,
               ),
-              Text(
-                "12.30",
-                style: TextStyle(
-                  fontFamily: "Roboto",
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14,
-                  color: AppColors.BrightPurple,
+              Container(
+                padding: EdgeInsets.only(right: Get.width * 0.02),
+                child: Text(
+                  "12.30",
+                  style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    color: AppColors.BrightPurple,
+                  ),
                 ),
               )
             ],

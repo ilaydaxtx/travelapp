@@ -1,12 +1,27 @@
-class Destination {
-  String name;
-  bool isFavorite;
+import 'package:get/get.dart';
+import 'package:get/get_rx/get_rx.dart';
 
-  Destination({required this.name, this.isFavorite = false});
+class Destination {
+  int id;
+  String name;
+  RxBool isFavorite = false.obs;
+  String? imagePath;
+  double? price;
+
+  Destination({required this.id, required this.name, this.imagePath, this.price});
 }
 
 class Hotels {
+  int id;
   String name;
-  bool isFavorite;
-  Hotels({required this.name, this.isFavorite = false});
+  RxBool isFavorite = false.obs;
+  String? imagePath;
+  double? price;
+
+  Hotels({
+    required this.id,
+    required this.name,
+    this.imagePath,
+    this.price,
+  });
 }

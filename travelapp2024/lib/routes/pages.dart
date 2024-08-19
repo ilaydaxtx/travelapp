@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:travelapp2024/ui/home/controller/home_controller.dart';
 import 'package:travelapp2024/ui/home/view/home_view.dart';
 import 'package:travelapp2024/ui/welcome/welcome_controller.dart';
 import 'package:travelapp2024/routes/routes.dart';
@@ -15,16 +16,20 @@ class Pages {
       binding: BindingsBuilder(() {
         Get.put(SplashController());
       }),
-    ),  GetPage(
+    ),
+    GetPage(
       name: Routes.registerPage,
       page: () => RegisterPage(),
       binding: BindingsBuilder(() {
         Get.put(WelcomeController());
       }),
     ),
-        GetPage(
+    GetPage(
       name: Routes.HomeView,
       page: () => HomeView(),
+      /* binding: BindingsBuilder(){
+        Get.put(HomeController());
+      } */
     ),
   ];
 }

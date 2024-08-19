@@ -6,4 +6,5 @@ class Gradients {
     stops: [0, 0.8, 1],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
-  );}
+  );
+}

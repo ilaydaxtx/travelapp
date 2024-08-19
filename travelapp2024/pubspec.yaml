@@ -80,6 +80,13 @@ flutter:
     - assets/heart.png
     - assets/home.png
     - assets/person.png
+    - assets/hotel1.jpg
+    - assets/hotel2.jpg
+    - assets/hotel3.jpg
+    - assets/hotel4.jpg
+    - assets/library.jpg
+    - assets/fisher.jpg
+    - assets/doggy.png
 
   fonts:
     - family: AvertaPE
@@ -94,7 +101,6 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Fellix-Regular.ttf
-
 
   #         style: italic
   #   - family: Trajan Pro
