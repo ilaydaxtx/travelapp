@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travelapp2024/const/styles/colors.dart';
+import 'package:travelapp2024/ui/favorites/widget/favorites_list_widget.dart';
 import 'package:travelapp2024/ui/home/controller/home_controller.dart';
+import 'package:travelapp2024/ui/favorites/controller/favorite_destinations_controller.dart';
 import 'package:travelapp2024/utils/image_utils.dart';
 
 class HomeCardWidget extends StatelessWidget {
-  const HomeCardWidget({super.key, required this.homeController, required this.index});
+  HomeCardWidget({super.key, required this.homeController, required this.index});
   final int index;
   final HomeController homeController;
+  final FavoriteDestinationsController favoriteDestinationsController = Get.put(FavoriteDestinationsController());
+  final FavoriteDestinationsList favoriteDestinationsListObj = FavoriteDestinationsList();
 
   @override
   Widget build(BuildContext context) {
@@ -56,9 +60,34 @@ class HomeCardWidget extends StatelessWidget {
                 style: TextStyle(fontFamily: "AvertaPE", color: AppColors.whiteColor, fontSize: 10, fontWeight: FontWeight.w700),
               ),
             ),
+            Container(
+                alignment: Alignment.topRight,
+                height: Get.height * 0.04,
+                width: Get.width * 0.5,
+                child: Obx(
+                  () => IconButton(
+                    onPressed: () {
+                      favoriteDestinationsController.favoriteToggler;
+                      if (FavoriteDestinationAddFunction.isFavoriteDestination.value == true) {
+                        favoriteDestinationsListObj.favoriteDestinationsList.add(homeController.destinations[index]);
+                      }
+                    },
+                    icon: favoriteDestinationsController.isFavoriteDestination.value
+                        ? Icon(
+                            Icons.favorite,
+                            color: AppColors.BrightPurple,
+                          )
+                        : Icon(
+                            Icons.favorite,
+                            color: AppColors.PrimaryBlack,
+                          ),
+                  ),
+                ))
           ],
         ),
       ),
     );
   }
+
+  FavoriteDestinationsController get FavoriteDestinationAddFunction => favoriteDestinationsController;
 }

@@ -1,17 +1,22 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:travelapp2024/const/styles/colors.dart';
+import 'package:travelapp2024/ui/favorites/controller/favorite_destinations_controller.dart';
+import 'package:travelapp2024/ui/favorites/controller/favorite_hotels_controller.dart';
 import 'package:travelapp2024/ui/home/controller/home_controller.dart';
 import 'package:travelapp2024/utils/image_utils.dart';
 
 class HomeHotelsWidget extends StatelessWidget {
-  const HomeHotelsWidget({
+  HomeHotelsWidget({
     super.key,
     required this.homeController,
   });
 
   final HomeController homeController;
+  final FavoriteHotelsController favoriteHotelsController = Get.put(FavoriteHotelsController());
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +84,25 @@ class HomeHotelsWidget extends StatelessWidget {
                           child: Text(
                             "Hotels",
                             style: TextStyle(color: AppColors.whiteColor, fontFamily: "AvertaPE", fontWeight: FontWeight.w700, fontSize: 12),
+                          ),
+                        ),
+                        Container(
+                          alignment: Alignment.topRight,
+                          height: Get.height * 0.04,
+                          width: Get.width * 0.5,
+                          child: Obx(
+                            () => IconButton(
+                              onPressed: favoriteHotelsController.hotelToggleFavorite,
+                              icon: favoriteHotelsController.isFavoriteHotel.value
+                                  ? Icon(
+                                      Icons.favorite,
+                                      color: AppColors.BrightPurple,
+                                    )
+                                  : Icon(
+                                      Icons.favorite,
+                                      color: AppColors.PrimaryBlack,
+                                    ),
+                            ),
                           ),
                         )
                       ],
